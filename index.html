@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/icones/icones.css">
+  <title>Idioma Explorer</title>
+
+  <style>
+    * { font-family: 'Arial'; font-size: 1rem; box-sizing: border-box; outline: none; color: darkgrey;}
+    body {margin: 0; padding: .5rem;}
+    .center { text-align: center; }
+.block { display: block;}
+    .borda { border: 1px solid black}
+    p { margin: 0}
+    input[type="text"] { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% }
+button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% ; background-color: darkcyan;  color: white;}
+
+    .logo { width: 30% }
+
+
+    @media (min-width: 576px) {  
+      
+      .logo { width: 30%; max-width: 150px; }
+      .identificacao { max-width: 400px; margin: 0 auto;}
+
+    }
+    
+    @media (min-width: 768px) { 
+
+    }
+
+  </style>
+</head>
+<body style="height: 100%;">
+  
+  
+  <div id="app" class="" style="height: 100%">
+
+
+
+
+    <section class="identificacao" style="display: flex; flex-direction: column; justify-content: center;  height: 100%;">
+      
+      <div class="center">
+        <img src="assets/logo.png" class="logo">
+      </div>
+      
+      <h2 style="font-size: 1.1rem; margin-top: 2rem; border-bottom: 2px solid darkcyan; width:100%">
+        Perfis de estudo disponíveis:
+      </h2>
+
+      <ul style="list-style-type: none; padding: 0; margin-top: 1rem; width: 100%;">
+        <li style="display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px;">
+          <i class="fa fa-user fa-2x"></i>
+          <span style="font-size: 1rem; margin-left: 1rem;" >Gasparotto</span>
+        </li>
+        <li style="display: flex; align-items: center; ; border-bottom: 1px solid darkcyan;; padding: 10px">
+          <i class="fa fa-user fa-2x"></i>
+          <span style="font-size: 1rem; margin-left: 1rem;">Gasparotto</span>
+        </li>
+      </ul>
+      
+      <h2 style="font-size: 1.1rem; margin-top: 2rem; border-bottom: 2px solid darkcyan; width:100%">
+        Ou crie um novo perfil:
+      </h2>
+      
+
+      <input type="text" name="" id="" placeholder="Escolha um apelido">
+
+      <button style="margin-top: 1rem;">Iniciar estudos</button>
+
+    </section>
+
+    
+
+
+
+  </div>
+  
+
+
+
+</body>
+</html>
