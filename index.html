@@ -8,18 +8,52 @@
   <title>Idioma Explorer</title>
 
   <style>
-    * { font-family: 'Arial'; font-size: 1rem; box-sizing: border-box; outline: none; color: darkgrey;}
-    body {margin: 0; padding: .5rem;}
+    * { font-family: 'Arial'; font-size: 1rem; box-sizing: border-box; outline: none; color: #666;}
+    body {margin: 0; }
+    html { height: 100%;}
+    h2 { font-size: 1.1rem; border-bottom: 2px solid darkcyan; width:100%;margin: 0; padding: .5rem 0 }
+    .hide { display: none !important}
     .center { text-align: center; }
 .block { display: block;}
-    .borda { border: 1px solid black}
+    .borda { border: 1px solid #d4d4d4}
+    .round { border-radius: 5px;}
     p { margin: 0}
-    input[type="text"] { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% }
+    input[type="text"], select { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% }
 button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% ; background-color: darkcyan;  color: white;}
-
+    .w100 { width: 100% }
     .logo { width: 30% }
+    .pad05 { padding: .5rem }
+    .pad10 { padding: 1rem }
+    .padl10 { padding-left: 1rem;}
+    .mgb05 { margin-bottom: .5rem; }
+    .mgb10 { margin-bottom: 1rem; }
+    .mgt05 { margin-top: .5rem; }
+    .mgt10 { margin-top: 1rem; }
+    .txt-right { text-align: right;}
+    .flex { display: flex;}
+    .flex-jcsb { justify-content: space-between }
+    .flex-aic { align-items: center }
+    .fs09 { font-size: .9rem}
+    .fs12 { font-size: 1.2rem}
+    .fs15 { font-size: 1.5rem}
+    .bold { font-weight: bold;}
 
+    .fc-white { color: white }
 
+    .lista-licoes { border: 1px solid #d4d4d4; border-left: 3px solid darkcyan; margin-bottom: 10px; border-radius: 5px;}
+    .resumo-licao div { font-size: .9rem}
+    .row { display: flex; width: 100% }
+    .col3 { width: 30% }
+    .col4 { width: 40% }
+    .col5 { width: 50% }
+    .col7 { width: 70% }
+    .col8 { width: 80% }
+
+    .bgc-principal { background-color: darkcyan; color: white}
+    .bgc-green { background-color: green; color: white;}
+    .bgc-red { background-color: red; color: #fff }
+    .termo-dets { padding: 5px 0; border-bottom: 1px solid #d4d4d4;}
+i.fa { color: inherit;}
     @media (min-width: 576px) {  
       
       .logo { width: 30%; max-width: 150px; }
@@ -38,20 +72,279 @@ button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100
   
   <div id="app" class="" style="height: 100%">
 
+    <section class="prova-mental hide" style="display: flex; flex-direction: column; height: 100%">
+    
+      <div class="flex flex-jcsb flex-aic bgc-principal pad10">
+        <span class="fc-white">Fulano da Silva</span>
+        <i class="fa fa-user fa-2x"></i>
+      </div>
+
+      <div class="pad05">
+        
+        <h2 class="mgb10">Modo prova mental</h2>
+
+        
+          <p >
+            <input type="radio" name="" id=""> Todos
+            <input type="radio" name="" id=""> Somente com erros
+          </p>
+          
+        
+
+        <select class="mgb10" name="" id="">
+          <option value="">Todos</option>
+        </select>
+
+        <div class="flex flex-jcsb flex-aic w100 mgb10">
+          <i class="fa fa-mail-reply fa-2x"></i>
+          <div class="center fs15 bold">
+            0/34
+          </div>
+          <i class="fa fa-play fa-2x"></i>
+        </div>
+
+        <p class="pad10 fs12 round mgb10 center" style="background-color: antiquewhite;">
+          Termo em portugues
+        </p>
+
+        <div class="mgb10 fs12 pad10 round center" style="background-color: lightblue">
+          <i class="fa fa-eye fa-lg"></i>
+          <span class="fs12">?????</span>
+        </div>
+
+        <div class="flex flex-jcsb w100 mgb10 round">
+          <div class="center col4 round borda">
+            <div class="fs15 bold pad05">4</div>
+            <button class="bgc-green"><i class="fa fa-check fa-2x"></i></button>
+          </div>
+          <div class="center col4 round borda">
+            <div class="fs15 bold pad05">4</div>
+            <button class="bgc-red"><i class="fa fa-close fa-2x"></i></button>
+          </div>
+        </div>
 
 
+      </div>
 
-    <section class="identificacao" style="display: flex; flex-direction: column; justify-content: center;  height: 100%;">
+    </section>
+
+    <section class="estudo hide" style="display: flex; flex-direction: column; height: 100%">
+    
+      <div class="flex flex-jcsb flex-aic bgc-principal pad10">
+        <div class="flex flex-aic fc-white">
+          <i class="fa fa-angle-left fa-2x"></i>
+          <span class="fc-white padl10">Fulano da Silva</span>
+        </div>
+        <i class="fa fa-user fa-2x"></i>
+      </div>
+
+      <div class="pad05">
+        <h2 class="mgb05">Modo estudo</h2>
+        <div class="flex">
+
+          <select name="" id="">Selecione o livro
+            <option value="">Livro</option>
+          </select>
+
+          <select name="" id="">
+            <option value="">Capítulo</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="pad05">
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2.5rem; margin: 0 1rem;">88%</div>
+          <div style="flex-grow: 1" class="resumo-licao">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex-grow: 1; overflow: auto" class="pad05">
+        
+        <h2>Verbos</h2>
+        <div class="flex flex-jcsb termo-dets">
+          <div>cantar (de, para) <br>
+            sing / sanf/ song (to, for) <br>
+            <i>obs da termo</i>
+          </div>
+          <div class="txt-right">3/2 <br><i class="fa fa-circle"  style="font-size: .7rem; color: green"></i> 
+            <i class="fa fa-circle"style="font-size: .7rem; color: red"></i> <i class="fa fa-circle"style="font-size: .7rem; color: green"></i> </div>
+        </div>
+      
+        <div class="flex flex-jcsb termo-dets">
+          <div>cantar (de, para) <br>
+            sing / sanf/ song (to, for) <br>
+            <i>obs da termo</i>
+          </div>
+          <div>3/2 <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
+        </div>
+
+        <div class="flex flex-jcsb termo-dets">
+          <div>cantar (de, para) <br>
+            sing / sanf/ song (to, for) <br>
+            <i>obs da termo</i>
+          </div>
+          <div>3/2 <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
+        </div>
+
+        <h2 class="mgt10">Expressoes</h2>
+        <div class="flex flex-jcsb termo-dets">
+          <div>cantar (de, para) <br>
+            sing / sanf/ song (to, for) <br>
+            <i>obs da termo</i>
+          </div>
+          <div>3/2 <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
+        </div>
+
+        <h2 class="mgt10">Substantivos</h2>
+        <div class="flex flex-jcsb termo-dets">
+          <div>mesa | table <br>
+            <i>obs da termo</i>
+          </div>
+          <div>3/2 <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
+        </div>
+
+
+        <h2 class="mgt10">Frases</h2>
+        <div class="flex flex-jcsb termo-dets">
+          <div>Eu nao sei o que fazer nesse caso<br>
+            I don't know what to do in this case<br>
+            <i>obs da termo</i>
+          </div>
+          <div>3/2 <br> <i class="fa fa-circle" style="font-size: .6rem;"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
+        </div>
+
+        <div class="flex flex-jcsb termo-dets">
+          <div>Eu nao sei o que fazer nesse caso<br>
+            I don't know what to do in this case<br>
+            <i>obs da termo</i>
+          </div>
+          <div>3/2 <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> </div>
+        </div>
+
+
+      </div>
+    
+    </section>
+
+    <section class="navegacao hide" style="display: flex; flex-direction: column; height: 100%">
+    
+      <div class="flex flex-jcsb flex-aic bgc-principal pad10">
+        <div class="flex flex-aic fc-white">
+          <i class="fa fa-angle-left fa-2x"></i>
+          <span class="fc-white padl10">Fulano da Silva</span>
+        </div>
+        <i class="fa fa-user fa-2x"></i>
+      </div>
+
+      <div class="pad05">
+        <h2 class="mgb10">Progresso por livro</h2>
+        <select name="" id="">Selecione o livro
+          <option value="">Livro 1</option>
+        </select>
+      </div>
+
+      <div class="pad05">
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2.5rem; margin: 0 1rem;">88%</div>
+          <div style="flex-grow: 1" class="resumo-licao">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex-grow: 1; overflow: auto" class="pad05">
+        
+        <h2 class="mgb10">Aproveitamento por lição</h2>
+        
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2rem">1</div>
+          <div style="font-size: 2.5rem; margin: 0 1rem;">88%</div>
+          <div style="flex-grow: 1" class="resumo-licao">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+      
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2rem">2</div>
+          <div style="font-size: 2.5rem; margin: 0 1rem;">74%</div>
+          <div style="flex-grow: 1">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2rem">3</div>
+          <div style="font-size: 2.5rem; margin: 0 1rem;">95%</div>
+          <div style="flex-grow: 1">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2rem">3</div>
+          <div style="font-size: 2.5rem; margin: 0 1rem;">95%</div>
+          <div style="flex-grow: 1">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+
+        <div class="flex flex-aic w100 pad05 lista-licoes">
+          <div style="font-size: 2rem">3</div>
+          <div style="font-size: 2.5rem; margin: 0 1rem;">95%</div>
+          <div style="flex-grow: 1">
+            <div class="row"><div class="col5">Verbos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Expressoes</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Substantivos</div><div class="col5 txt-right">80%</div></div>
+            <div class="row"><div class="col5">Frases</div><div class="col5 txt-right">80%</div></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex pad05">
+        <button>Estudar</button>
+        <button>Teste mental</button>
+      </div>
+    
+    </section>
+
+    <section class="identificacao pad05" style="display: flex; flex-direction: column; justify-content: center;  height: 100%;">
       
       <div class="center">
         <img src="assets/logo.png" class="logo">
       </div>
       
-      <h2 style="font-size: 1.1rem; margin-top: 2rem; border-bottom: 2px solid darkcyan; width:100%">
-        Perfis de estudo disponíveis:
-      </h2>
+      <h2>Perfis de estudo disponíveis:</h2>
 
-      <ul style="list-style-type: none; padding: 0; margin-top: 1rem; width: 100%;">
+      <ul style="list-style-type: none; padding: 0;">
+
+        <li style="display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px;">
+          <i class="fa  fa-user-secret fa-2x"></i>
+          <span style="font-size: 1rem; margin-left: 1rem;" >Anônimo</span>
+        </li>
+
         <li style="display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px;">
           <i class="fa fa-user fa-2x"></i>
           <span style="font-size: 1rem; margin-left: 1rem;" >Gasparotto</span>
@@ -62,9 +355,7 @@ button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100
         </li>
       </ul>
       
-      <h2 style="font-size: 1.1rem; margin-top: 2rem; border-bottom: 2px solid darkcyan; width:100%">
-        Ou crie um novo perfil:
-      </h2>
+      <h2 class="mgb10">Ou crie um novo perfil:</h2>
       
 
       <input type="text" name="" id="" placeholder="Escolha um apelido">
