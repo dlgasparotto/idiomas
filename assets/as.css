@@ -1,0 +1,82 @@
+* { font-family: 'Arial'; font-size: 1rem; box-sizing: border-box; outline: none; color: #666;}
+body {margin: 0; height: 100%;}
+html { height: 100%;}
+h2 { font-size: 1.1rem; border-bottom: 2px solid darkcyan; width:100%;margin: 0; padding: .5rem 0 }
+p { margin: 0}
+i.fa { color: inherit;}
+
+
+input[type="text"], 
+select { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% }
+button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% ; background-color: darkcyan;  color: white;}
+
+.pad05 { padding: .5rem }
+.pad10 { padding: 1rem }
+.padl10 { padding-left: 1rem;}
+
+.mgb05 { margin-bottom: .5rem; }
+.mgb10 { margin-bottom: 1rem; }
+.mgt05 { margin-top: .5rem; }
+.mgt10 { margin-top: 1rem; }
+
+.bold { font-weight: bold;}
+.link { cursor: pointer}
+.txt-right { text-align: right;}
+.txt-center { text-align: center; }
+
+.flex { display: flex;}
+.flex-jcsb { justify-content: space-between }
+.flex-jcc { justify-content: center }
+.flex-aic { align-items: center }
+.fs09 { font-size: .9rem}
+.fs12 { font-size: 1.2rem}
+.fs15 { font-size: 1.5rem}
+
+.hide { display: none !important}
+.block { display: block;}
+.borda { border: 1px solid #d4d4d4}
+.round { border-radius: 5px;}
+
+.w100 { width: 100% }
+.h100 { height: 100% }
+
+.row { display: flex; width: 100% }
+.col3 { width: 30% }
+.col4 { width: 40% }
+.col5 { width: 50% }
+.col7 { width: 70% }
+.col8 { width: 80% }
+
+.ul-limpa { list-style-type: none; padding: 0; }
+
+.bgc-principal { background-color: darkcyan; color: white}
+.bgc-green { background-color: green; color: white;}
+.bgc-red { background-color: red; color: #fff }
+
+.fc-white { color: white }
+
+.diag-flex-col { display: flex; flex-direction: column; height: 100% }
+
+/* Da aplicção  */
+
+
+.lista-licoes { border: 1px solid #d4d4d4; border-left: 3px solid darkcyan; margin-bottom: 10px; border-radius: 5px;}
+.resumo-licao div { font-size: .9rem}
+.termo-dets { padding: 5px 0; border-bottom: 1px solid #d4d4d4;}
+
+
+/* IDENTIFICACAO */
+.logo { width: 30% }
+.lista-perfis li { display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px; }
+.item-perfil { font-size: 1rem; margin-left: 1rem }
+
+@media (min-width: 576px) {  
+  
+  .logo { width: 30%; max-width: 150px; }
+  .identificacao { max-width: 400px; margin: 0 auto;}
+
+}
+
+@media (min-width: 768px) { 
+
+}

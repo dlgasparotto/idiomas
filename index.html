@@ -5,74 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/icones/icones.css">
+  <link rel="stylesheet" href="assets/as.css">
+  
+  <script src ="assets/jq341.js"></script>
+  <script src ="assets/vue232.js"></script>
+  <script src ="assets/app.js"></script>
+
   <title>Idioma Explorer</title>
-
-  <style>
-    * { font-family: 'Arial'; font-size: 1rem; box-sizing: border-box; outline: none; color: #666;}
-    body {margin: 0; }
-    html { height: 100%;}
-    h2 { font-size: 1.1rem; border-bottom: 2px solid darkcyan; width:100%;margin: 0; padding: .5rem 0 }
-    .hide { display: none !important}
-    .center { text-align: center; }
-.block { display: block;}
-    .borda { border: 1px solid #d4d4d4}
-    .round { border-radius: 5px;}
-    p { margin: 0}
-    input[type="text"], select { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% }
-button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100% ; background-color: darkcyan;  color: white;}
-    .w100 { width: 100% }
-    .logo { width: 30% }
-    .pad05 { padding: .5rem }
-    .pad10 { padding: 1rem }
-    .padl10 { padding-left: 1rem;}
-    .mgb05 { margin-bottom: .5rem; }
-    .mgb10 { margin-bottom: 1rem; }
-    .mgt05 { margin-top: .5rem; }
-    .mgt10 { margin-top: 1rem; }
-    .txt-right { text-align: right;}
-    .flex { display: flex;}
-    .flex-jcsb { justify-content: space-between }
-    .flex-aic { align-items: center }
-    .fs09 { font-size: .9rem}
-    .fs12 { font-size: 1.2rem}
-    .fs15 { font-size: 1.5rem}
-    .bold { font-weight: bold;}
-
-    .fc-white { color: white }
-
-    .lista-licoes { border: 1px solid #d4d4d4; border-left: 3px solid darkcyan; margin-bottom: 10px; border-radius: 5px;}
-    .resumo-licao div { font-size: .9rem}
-    .row { display: flex; width: 100% }
-    .col3 { width: 30% }
-    .col4 { width: 40% }
-    .col5 { width: 50% }
-    .col7 { width: 70% }
-    .col8 { width: 80% }
-
-    .bgc-principal { background-color: darkcyan; color: white}
-    .bgc-green { background-color: green; color: white;}
-    .bgc-red { background-color: red; color: #fff }
-    .termo-dets { padding: 5px 0; border-bottom: 1px solid #d4d4d4;}
-i.fa { color: inherit;}
-    @media (min-width: 576px) {  
-      
-      .logo { width: 30%; max-width: 150px; }
-      .identificacao { max-width: 400px; margin: 0 auto;}
-
-    }
-    
-    @media (min-width: 768px) { 
-
-    }
-
-  </style>
 </head>
-<body style="height: 100%;">
-  
-  
-  <div id="app" class="" style="height: 100%">
 
-    <section class="prova-mental hide" style="display: flex; flex-direction: column; height: 100%">
+<body>
+  
+  <div id="app" class="h100">
+
+    <!-- Identificacao  -->
+
+    <section class="identificacao diag-flex-col flex-jcc pad05">
+      
+      <div class="txt-center">
+        <img src="assets/logo.png" class="logo">
+      </div>
+      
+      <h2>Perfis de estudo disponíveis:</h2>
+
+      <ul class="ul-limpa lista-perfis">
+        <li v-for="perfil of perfis" :idperfil="perfil.id">
+          <i v-if="!perfil.id" class="fa fa-user-secret fa-2x"></i>
+          <i v-if="perfil.id" class="fa fa-user fa-2x"></i>
+          <span class="item-perfil">{{ perfil.nome }}</span>
+        </li>
+      </ul>
+      
+      <h2 class="mgb10">Ou crie um novo perfil:</h2>
+      <input type="text" v-model="novoPerfil" placeholder="Escolha um apelido">
+      <button class="mgt10" @click="addPerfil">Iniciar estudos</button>
+
+    </section>
+
+    <!-- / Identificacao  -->
+
+    <section class="prova-mental diag-flex-col hide">
     
       <div class="flex flex-jcsb flex-aic bgc-principal pad10">
         <span class="fc-white">Fulano da Silva</span>
@@ -128,7 +100,7 @@ i.fa { color: inherit;}
 
     </section>
 
-    <section class="estudo hide" style="display: flex; flex-direction: column; height: 100%">
+    <section class="estudo diag-flex-col hide">
     
       <div class="flex flex-jcsb flex-aic bgc-principal pad10">
         <div class="flex flex-aic fc-white">
@@ -234,7 +206,7 @@ i.fa { color: inherit;}
     
     </section>
 
-    <section class="navegacao hide" style="display: flex; flex-direction: column; height: 100%">
+    <section class="navegacao diag-flex-col hide">
     
       <div class="flex flex-jcsb flex-aic bgc-principal pad10">
         <div class="flex flex-aic fc-white">
@@ -330,48 +302,7 @@ i.fa { color: inherit;}
     
     </section>
 
-    <section class="identificacao pad05" style="display: flex; flex-direction: column; justify-content: center;  height: 100%;">
-      
-      <div class="center">
-        <img src="assets/logo.png" class="logo">
-      </div>
-      
-      <h2>Perfis de estudo disponíveis:</h2>
-
-      <ul style="list-style-type: none; padding: 0;">
-
-        <li style="display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px;">
-          <i class="fa  fa-user-secret fa-2x"></i>
-          <span style="font-size: 1rem; margin-left: 1rem;" >Anônimo</span>
-        </li>
-
-        <li style="display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px;">
-          <i class="fa fa-user fa-2x"></i>
-          <span style="font-size: 1rem; margin-left: 1rem;" >Gasparotto</span>
-        </li>
-        <li style="display: flex; align-items: center; ; border-bottom: 1px solid darkcyan;; padding: 10px">
-          <i class="fa fa-user fa-2x"></i>
-          <span style="font-size: 1rem; margin-left: 1rem;">Gasparotto</span>
-        </li>
-      </ul>
-      
-      <h2 class="mgb10">Ou crie um novo perfil:</h2>
-      
-
-      <input type="text" name="" id="" placeholder="Escolha um apelido">
-
-      <button style="margin-top: 1rem;">Iniciar estudos</button>
-
-    </section>
-
-    
-
-
-
   </div>
-  
-
-
 
 </body>
 </html>
