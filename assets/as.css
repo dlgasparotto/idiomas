@@ -13,6 +13,7 @@ button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100
 .pad05 { padding: .5rem }
 .pad10 { padding: 1rem }
 .padl10 { padding-left: 1rem;}
+.padh05 { padding-left: .5rem; padding-right: .5rem;}
 
 .mgb05 { margin-bottom: .5rem; }
 .mgb10 { margin-bottom: 1rem; }
@@ -28,11 +29,13 @@ button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100
 .flex-jcsb { justify-content: space-between }
 .flex-jcc { justify-content: center }
 .flex-aic { align-items: center }
+.fs08 { font-size: .8rem}
 .fs09 { font-size: .9rem}
 .fs12 { font-size: 1.2rem}
 .fs15 { font-size: 1.5rem}
+.fs20 { font-size: 2rem}
 
-.hide { display: none !important}
+.hide { display: none}
 .block { display: block;}
 .borda { border: 1px solid #d4d4d4}
 .round { border-radius: 5px;}
@@ -47,11 +50,17 @@ button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100
 .col7 { width: 70% }
 .col8 { width: 80% }
 
+.fgreen { color: green !important;}
+.fred { color: red !important;}
+.fblue { color: blue !important;}
+.fyellow { color: darkgoldenrod !important;}
+
 .ul-limpa { list-style-type: none; padding: 0; }
 
 .bgc-principal { background-color: darkcyan; color: white}
 .bgc-green { background-color: green; color: white;}
 .bgc-red { background-color: red; color: #fff }
+.bgc-blue { background-color: steelblue; color: #fff }
 
 .fc-white { color: white }
 
@@ -59,16 +68,20 @@ button { border-radius: 5px;border: 1px solid #d4d4d4; padding: 1rem; width: 100
 
 /* Da aplicção  */
 
-
 .lista-licoes { border: 1px solid #d4d4d4; border-left: 3px solid darkcyan; margin-bottom: 10px; border-radius: 5px;}
 .resumo-licao div { font-size: .9rem}
 .termo-dets { padding: 5px 0; border-bottom: 1px solid #d4d4d4;}
-
+.termo-dets i { font-size: .7rem; }
 
 /* IDENTIFICACAO */
 .logo { width: 30% }
 .lista-perfis li { display: flex; align-items: center; border-bottom: 1px solid darkcyan; padding: 10px; }
 .item-perfil { font-size: 1rem; margin-left: 1rem }
+
+/* LIVROS SEL */
+.visu-livro { width: 3.5rem; height: 5rem; border-radius: 5px; border: 3px solid lightgray; margin: 5px; text-align: center; line-height: 5rem; vertical-align: middle;
+  font-size: 1.5rem;}
+.livro-sel { background-color: aliceblue;}
 
 @media (min-width: 576px) {  
   
